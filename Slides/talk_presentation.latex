@@ -1,0 +1,110 @@
+\documentclass{beamer}
+ 
+\usepackage[utf8]{inputenc}
+ 
+ 
+%Information to be included in the title page:
+\title{Reverse Engineering and Code Emulation with Ghidra}
+\author{Karl "Rosie" Sickendick}
+%\institute{}
+\date{October 2019}
+ 
+\AtBeginSection
+{
+    \begin{frame}
+        \sectionpage
+    \end{frame}
+}
+
+\setcounter{section}{-1}
+ 
+\begin{document}
+ 
+\frame{\titlepage}
+ 
+\begin{frame}
+\frametitle{Outline}
+\tableofcontents
+\end{frame}
+
+\section*{Who Am I?}
+    \begin{frame}
+    \frametitle{Who Am I?}
+        \begin{itemize}
+            \item Karl "Rosie" Sickendick
+            \item Active duty Major in the Air Force
+            \item Stationed at Idaho National Labs as part of an Air Force fellowship program
+            \item BS in EE, MS in CS
+            \item Experience with: cyber capability and tactics development
+            \item Very happy to be here!
+        \end{itemize}
+    \end{frame}
+
+\section{Introduction to Ghidra}
+    \begin{frame}
+    \frametitle{Installation \& Requirements}
+    \end{frame}
+     
+    \begin{frame}
+    \frametitle{Starting Ghidra}
+    \end{frame}
+     
+    \begin{frame}
+    \frametitle{Importing Files \& Supported Types}
+    \end{frame}
+     
+    \begin{frame}
+    \frametitle{Feature Walkthrough}
+        \begin{itemize}
+            \item Undo
+            \item C-like Output View
+            \item Strings View
+            \item Binary View
+            \item Function Signatures
+            \item Linking to other binaries % Maybe just mention this as a feature
+            \item Server Mode % Maybe just mention as a feature
+            \item Structure building % Recommend this as a way to improve decompiling TODO: any other recommendations?  Maybe a separate slide for those?  Maybe a slide at the end with resources?  Maybe a dos/don'ts slide
+            \item C++ Support
+            \item Data types
+            % Which other ones am I missing?
+            \item Addons % This transitions into my demo because we'll be starting the addon...
+        \end{itemize}
+    \end{frame}
+
+\section{Demo of PCode Emulation with Python}
+    \begin{frame}
+    \frametitle{Demo of PCode Emulation with Python}
+    \end{frame}
+
+\section{Ghidra Addons via Python}
+    \begin{frame}
+    \frametitle{Why Use Python} % instead of Java
+    \end{frame}
+     
+    \begin{frame}
+    \frametitle{How Does Ghidra Employ Python?}
+    \end{frame}
+     
+    \begin{frame}
+    \frametitle{Help Documentation} % Especially the flat api
+    \end{frame}
+     
+    \begin{frame}
+    \frametitle{Minimal Python Addon Example}
+    \end{frame}
+     
+    \begin{frame}
+    \frametitle{PCode Emulator Walkthrough}
+    \end{frame}
+
+\section*{Resources}
+    \begin{frame}
+    \frametitle{Ghidra Usage Do's and Don'ts}
+    % Do build structures, classes, function signatures, link to other binaries, add data types to make life simpler
+    \end{frame}
+
+    \begin{frame}
+    \frametitle{Links For More Info}
+    \end{frame}
+
+\end{document}

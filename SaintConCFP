@@ -1,0 +1,22 @@
+Bio
+Electrical Engineer, Computer Scientist, experienced cyber capability developer, Air Force Officer, recently assigned to Idaho National Labs as an Air Force Fellow
+
+Previous Presentations
+I have completed no relevant presentations in public forums, but have completed many in official settings.  I successfully defended my master's thesis (https://scholar.afit.edu/etd/904/), I've taught multiple programming and security courses, and have presented my teams' and my own technical and non-technical work on dozens of occasions.  (Thank you for considering me!)
+
+Title
+Reverse Engineering and Code Emulation with Ghidra
+
+Abstract
+The NSA recently open-sourced the Ghidra software reverse engineering tool.  While it's unlikely to steal IDA-heads, Binjas, or those 5 people who remember Radare2's command line, it is a mature RE tool with a huge feature set.  It's also easily extensible through Java, Python, and a command line batch mode.  This talk will introduce Ghidra briefly, then demonstrate/release an open-source Ghidra intermediate language emulation capability, and finally describe the basics of extending Ghidra via Python scripting.
+
+Outline
+1. Introduction to Ghidra and basic usage.  We'll step through importing some Linux malware I've collected to see how to get started using Ghidra, use the decompiler to see what the malware is doing, look at how Ghidra works across multiple architectures, and what the Pcode intermediate language is doing. 
+2. Demonstration of emulating Ghidra's Pcode intermediate language via Python script (to-be released on Github, open source, at conference).  We'll provide a function with initial parameters, then execute it to get the return value and final memory state.  We'll step through a couple malware functions to provide more intuition about what they're doing.
+3. Walk-through of creating Ghidra capability via Python scripting, with emulator as example.  We'll step through the emulator script's boilerplate, talk about the objects and functions that are helpful for all script writers and for the emulator specifically, and discuss the API documentation available already through Ghidra (and I'll point out the Pcode emulator work that is already there, but not clear how to use).
+
+Needs
+HDMI connector to projector
+
+30 minute intermediate-level presentation.
+
