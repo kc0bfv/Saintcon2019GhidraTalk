@@ -1,10 +1,8 @@
 talk_presentation.pdf:
 
-%.toc: %.latex
-	pdflatex $<
-
-%.pdf: %.latex %.toc
-	pdflatex $<
+%.pdf: %.latex
+	pdflatex $< || (rm $@ && false)
+	pdflatex $< || (rm $@ && false)
 
 PHONY: clean
 

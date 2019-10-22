@@ -1,0 +1,4 @@
+state.ram.store(0x08, 8, 0x0000000000414141)
+state.ram.store(0x10, 8, 0x0000000000333231)
+state.ram.store(0x18, 8, 0x0000000000000000)
+state.ram.store(0x20, 8, 0x0041414141414141)
