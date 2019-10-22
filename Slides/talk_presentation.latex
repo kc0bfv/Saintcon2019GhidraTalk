@@ -76,7 +76,7 @@
     \end{frame}
 
 \section{Introduction to Ghidra}
-    \being{frame}
+    \begin{frame}
         \frametitle{Ghidra Intro}
         \begin{itemize}
             \item Comrehensive software reverse engineering tool
@@ -96,6 +96,21 @@
                 \item Build a Sleigh module for the architecture
                 \item Map bytes to instructions to PCode
                 \item Get the decompiler for free
+            \end{itemize}
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Ghidra Intro}
+        \begin{itemize}
+            \item Setup
+            \begin{itemize}
+                \item Install OpenJDK 11
+                \item Download zip: \url{https://ghidra-sre.org/}
+                \item Unzip somewhere you can write % works even without admin
+                \item Make sure Java is in your PATH...
+                \item `Dual monitors strongly suggested'... % Just included so government users have a requirement to point to?
+                \item \texttt{GHIDRA\_INSTALL/ghidra\_version/ghidraRun}
             \end{itemize}
         \end{itemize}
     \end{frame}
@@ -135,7 +150,6 @@
         \end{itemize}
     \end{frame}
 
-    \imgframewidth{Importing Files \& Supported Types}{Screenshots/Imported.png}{1}
     
     \begin{frame}
     \frametitle{Importing Files \& Supported Types}
@@ -156,232 +170,28 @@
         \end{itemize}
     \end{frame}
 
-    \imgframewidth{Starting Analysis}{Screenshots/MainWindow.png}{1}
+    \imgframewidth{Importing Files \& Supported Types}{Screenshots/Imported.png}{1}
+
+    \imgframewidth{Starting Analysis}{Screenshots/MWPreAnalysis.png}{1}
     \imgframewidth{Starting Analysis}{Screenshots/Analyzers.png}{1} % Some are architecture specific
     \imgframewidth{Symbol Tree}{Screenshots/SymbolTreeHighlighted.png}{1}
     \imgframewidth{Program Listing}{Screenshots/ProgListing.png}{1}
     \imgframewidth{Program Listing}{Screenshots/ProgListingCode.png}{1}
     \imgframeheight{Showing PCode}{Screenshots/PLShowLayersButton.png}{.8}
-    \imgframewidth{Feature Walkthrough - PCode}{Screenshots/PLPCodeShowing.png}{1}
-
-
-    \begin{frame}
-    \frametitle{Installation \& Requirements}
-        \begin{itemize}
-            \item Requirements
-            \begin{itemize}
-                \item 4 GB RAM
-                \item 824 MB disk space
-                \item `Dual monitors strongly suggested' % Just included so government users have a requirement to point to?
-                \item Java 11 JDK - OpenJDK 11 works % apt install openjdk-11-jdk 
-            \end{itemize}
-            \item Installation
-            \begin{itemize}
-                \item Download zip: https://ghidra-sre.org/
-                \item Unzip somewhere you can write % works even without admin
-                \item Make sure Java is in your PATH...
-            \end{itemize}
-        \end{itemize}
-    \end{frame}
-     
-    \begin{frame}
-    \frametitle{Starting Ghidra}
-        \begin{itemize}
-            \item Run \texttt{UNZIP\_LOCATION/ghidra\_VERSION/ghidraRun}
-        \end{itemize}
-        \includegraphics[height=.75\textheight]{Screenshots/AboutDialog.png}
-        \centering
-    \end{frame}
-     
-    \begin{frame}
-    \frametitle{Creating a Project}
-        \includegraphics[width=.9\textwidth]{Screenshots/NewProject.png}
-        \centering
-    \end{frame}
-
-    \begin{frame}
-    \frametitle{Creating a Project}
-        \includegraphics[width=.9\textwidth]{Screenshots/ProjectType.png}
-        \centering
-    \end{frame}
-
-    \begin{frame}
-    \frametitle{Creating a Project}
-        \includegraphics[width=.9\textwidth]{Screenshots/ProjLoc.png}
-        \centering
-    \end{frame}
-
-    \begin{frame}
-    \frametitle{Creating a Project}
-        \includegraphics[width=.9\textwidth]{Screenshots/ProjCreated.png}
-        \centering
-    \end{frame}
-
-    \begin{frame}
-    \frametitle{Importing Files \& Supported Types}
-        \includegraphics[width=.9\textwidth]{Screenshots/ImportFileStart.png}
-        \centering
-    \end{frame}
-
-    \begin{frame}
-    \frametitle{Importing Files \& Supported Types}
-        \includegraphics[width=.9\textwidth]{Screenshots/ImportingFile.png}
-        \centering
-    \end{frame}
-
-    \begin{frame}
-    \frametitle{Importing Files \& Supported Types}
-        \includegraphics[width=.9\textwidth]{Screenshots/ImportDefLang.png}
-        \centering
-    \end{frame}
-
-    \begin{frame}
-    \frametitle{Importing Files \& Supported Types}
-        \includegraphics[width=.9\textwidth]{Screenshots/ImportMoreLang.png}
-        \centering
-    \end{frame}
-    
-    \begin{frame}
-    \frametitle{Importing Files \& Supported Types}
-        \begin{itemize}
-            \item 6502 (NES?  Atari?)
-            \item Motorolla: 6805, 68000
-            \item Intel: 8048, 8051, 8085, 80251
-            \item ARM \& AARCH64 \{big,little\} endian
-            \item AVR\{8,32\}
-            \item JVM
-            \item MIPS \{32,64\} bit \{big,little\} endian
-            \item PIC-\{12,16,17,18,24\}
-            \item PowerPC \{32,64\} bit \{big,little\} endian
-            \item Sparc
-            \item TI\_MSP430
-            \item x86 \{16,32,64\} bit
-            \item Z\{80,180\}
-        \end{itemize}
-    \end{frame}
-
-    \imgframeheight{Importing Files \& Supported Types}{Screenshots/PostImport.png}{.8}
-    \imgframewidth{Importing Files \& Supported Types}{Screenshots/Imported.png}{1}
-    \imgframewidth{Importing Files \& Supported Types}{Screenshots/Analyzers.png}{1} % Some are architecture specific
-
-    \begin{frame}
-    \frametitle{Feature Walkthrough}
-        \includegraphics[width=\textwidth]{Screenshots/MainWindow.png}
-        \centering
-    \end{frame}
-
-    \begin{frame}
-    \frametitle{Feature Walkthrough - Symbol Tree}
-        \includegraphics[width=\textwidth]{Screenshots/SymbolTreeHighlighted.png}
-        \centering
-    \end{frame}
-     
-    \begin{frame}
-    \frametitle{Feature Walkthrough - Symbol Tree}
-        \includegraphics[width=.9\textwidth]{Screenshots/SymbolTreeExpand.png}
-        \centering
-    \end{frame}
-     
-    \begin{frame}
-    \frametitle{Feature Walkthrough - Symbol Tree}
-        \includegraphics[width=.9\textwidth]{Screenshots/SymbolTreeList.png}
-        \centering
-    \end{frame}
-
-    \begin{frame}
-    \frametitle{Feature Walkthrough - Program Listing}
-        \includegraphics[width=.9\textwidth]{Screenshots/ProgListing.png}
-        \centering
-    \end{frame}
-
-    \begin{frame}
-    \frametitle{Feature Walkthrough - Program Listing}
-        \includegraphics[width=.9\textwidth]{Screenshots/ProgListingCode.png}
-        \centering
-    \end{frame}
-
-    \begin{frame}
-    \frametitle{Feature Walkthrough - Program Listing}
-        \includegraphics[width=.9\textwidth]{Screenshots/PLShowLayers.png}
-        \centering
-    \end{frame}
-
-    \begin{frame}
-    \frametitle{Feature Walkthrough - Program Listing}
-        \includegraphics[height=.8\textheight]{Screenshots/PLShowLayersButton.png}
-        \centering
-    \end{frame}
-
-    \imgframewidth{Feature Walkthrough - Program Listing}{Screenshots/PLLayersShowing.png}{1}
-
-    \imgframewidth{Feature Walkthrough - PCode}{Screenshots/PLTurningOnPCode.png}{1}
-    \imgframewidth{Feature Walkthrough - PCode}{Screenshots/PLPCodeShowing.png}{1}
-    \imgframewidth{Feature Walkthrough - PCode}{Screenshots/PCodeStepsPush.png}{1}
-    \imgframewidth{Feature Walkthrough - PCode}{Screenshots/PCodeStepsPushPcode.png}{1}
-    \imgframewidth{Feature Walkthrough - PCode}{Screenshots/PushPcodeClose.png}{1}
-    % One great use of PCode is when you don't know the architecture
-    \imgframeheight{Feature Walkthrough - PCode}{Screenshots/PLAarch64.png}{.8}
-    \imgframeheight{Feature Walkthrough - PCode}{Screenshots/PLAarch64PCode.png}{.8}
-    \imgframeheight{Feature Walkthrough - Processor Manual}{Screenshots/ProcessorManual.png}{.8}
-
-    % Let's step through Ghidra's decompilation now.  We need something
-    % a bit more complicated - let's look at a stripped binary
-    \imgframeheight{Feature Walkthrough}{Screenshots/StrippedSymbolTree.png}{.8}
-
-    % Where do we start without a main? We might go to the entry function.
-    % We have a couple clues here about which function is the main function.
-    % We can double click on these to view their disassembly and decompilation,
-    % but a great place to start when reversing a binary is at the strings.
-    \imgframewidth{Feature Walkthrough}{Screenshots/LookingAtC.png}{1}
-
-    % Ghidra's got a strings window.  Let's look at some of the other features
-    \imgframeheight{Feature Walkthrough - Windows Available}{Screenshots/WindowDialog.png}{.8}
-
-    % The defined strings window shows all the strings Ghidra found in analysis
-    \imgframewidth{Feature Walkthrough - Strings}{Screenshots/Strings.png}{1}
-
-    % Selecting that string jumps to it in the program listing window, where we
-    % see a reference to that string.
-    \imgframewidth{Feature Walkthrough - Strings}{Screenshots/StringFound.png}{1}
-
-    % Following the reference takes us to a function that looks like the main function
-    \imgframewidth{Feature Walkthrough - Decompilation}{Screenshots/StringInDecompile.png}{1}
-
-    \imgframewidth{Feature Walkthrough - Decompilation}{Screenshots/InitialFuncSig.png}{1}
-
-    \imgframewidth{Feature Walkthrough - Decompilation}{Screenshots/FinalFuncSig.png}{1}
-
-    % You can see that after setting the function signature, many parts of the
-    % decompilation become much clearer.  Recommend you do set types and names
-    % whenever possible.
-    \imgframewidth{Feature Walkthrough - Decompilation}{Screenshots/MainAfterSig.png}{1}
-
-    \imgframewidth{Feature Walkthrough - Decompilation}{Screenshots/CreateParamsReturn.png}{1}
-
-    % Building structures really aids reversing efforts.  Ghidra incorporates
-    % structure instances into the decompilation, and even propagates them through
-    % function definitions if you set one as a parameter type.
-    \imgframewidth{Feature Walkthrough - Building Structures}{Screenshots/MainWindow.png}{1}
-    % All the data types are accessible down here in the main window
-    \imgframewidth{Feature Walkthrough - Building Structures}{Screenshots/MainWindowDataType.png}{1}
-    % Let's look at a function that builds and uses a structure.  Ghidra's analysis
-    % determined that this function uses nanosleep.  That's because it was imported.
-    % Imports - another great hint as to what's going on in a stripped binary.
-    % Ghidra has built the structure nanosleep needs, which the man pages call a
-    % timespec struct - and so does Ghidra.
-    % You can see the structure members being set clearly, and it has even
-    % backed the structure member type up into the function signature.
-    \imgframewidth{Feature Walkthrough - Building Structures}{Screenshots/SleepFunc.png}{1}
-    % Here's what the structure looks like when you try to edit it, perhaps by right
-    % clicking on an variable instance.
-    \imgframewidth{Feature Walkthrough - Building Structures}{Screenshots/SleepStruct.png}{1}
+    \imgframewidth{Showing PCode}{Screenshots/PLPCodeShowing.png}{1}
+    \imgframewidth{PCode Explanation}{Screenshots/PushPcodeClose.png}{1}
+    \imgframeheight{PCode Explanation}{Screenshots/PLAarch64PCode.png}{.8}
+    \imgframewidth{Decompilation}{Screenshots/StringInDecompile.png}{1}
+    \imgframewidth{Improving Decompilation - Function Signatures}{Screenshots/FinalFuncSig.png}{1}
+    \imgframewidth{Improving Decompilation - Structures}{Screenshots/MainWindowDataType.png}{1}
+    \imgframeheight{Improving Decompilation - Structures}{Screenshots/SleepFuncCloser.png}{.8}
 
     % Just one more thing I want to show off...  Lot's of people like a graph view.
-    \imgframewidth{Feature Walkthrough - Function Graphs}{Screenshots/MainGraph.png}{1}
+    \imgframewidth{Function Graphs}{Screenshots/MainGraph.png}{1}
      
     % Stuff that is awesome, but isn't getting a slide
     \begin{frame}
-    \frametitle{Feature Walkthrough}
+    \frametitle{Other Features}
         \begin{itemize}
             \item Undo!
             \item Middle clicking an entity to highlight all instances
@@ -395,10 +205,9 @@
         \end{itemize}
     \end{frame}
 
-    \imgframeheight{Feature Walkthrough - Scripts}{Screenshots/ScriptManagerBtn.png}{.8}
-    \imgframewidth{Feature Walkthrough - Scripts}{Screenshots/ScriptManager.png}{1}
-    \imgframewidth{Feature Walkthrough - Scripts}{Screenshots/ScriptManagerEx.png}{1}
-    \imgframewidth{Feature Walkthrough - Scripts}{Screenshots/ScriptManagerPCode.png}{1}
+    \imgframeheight{Scripts}{Screenshots/ScriptManagerBtn.png}{.8}
+    \imgframewidth{Scripts}{Screenshots/ScriptManager.png}{1}
+    \imgframewidth{Scripts}{Screenshots/ScriptManagerPCode.png}{1}
 
 \section{PCode Emulation with Python}
     \begin{frame}
@@ -420,9 +229,24 @@
     \end{frame}
 
     % TODO - add a slide with an enigma machine
+    \imgframeheight{An Enigma}{images/enigma.jpg}{.8}
     \begin{frame}
     \frametitle{PCode Emulation - Initial RAM Environment Setup}
         % TODO - add the initial decompilation so I can explain the ram setup
+        \begin{itemize}
+            \item Output @ 0x0: "\textbackslash x00\textbackslash x00\textbackslash x00\textbackslash x00\textbackslash x00\textbackslash x00\textbackslash x00\textbackslash x00"
+            \item Key / initial rotor states @ 0x8: "AAA"
+            \item Rotors selected @ 0x10: "123"
+            \item Swaps @ 0x18 : 0x00
+            \item Input text @ 0x20: "AAAAAAA\textbackslash x00"
+        \end{itemize}
+        ~\\
+        ~\\
+        \texttt{00000000: 0000 0000 0000 0000 4141 4100 0000 0000
+                00000010: 3132 3300 0000 0000 0000 0000 0000 0000
+                00000020: 4141 4141 4141 4100 0000 0000 0000 0000}
+        ~\\
+        ~\\
         \insertpythonfile{minimal_example/ram_setup.py}
     \end{frame}
     \imgframewidth{PCode Emulation - Parameter 0}{Screenshots/Param0.png}{1}
@@ -484,7 +308,7 @@
             \item Tons of open source projects to import (Angr?)
             \item Simplified prototyping (The console?)
         \end{itemize}
-        \item How does ghidra employ Python?
+        \item How does Ghidra employ Python?
         \begin{itemize}
             \item Jython - Java Python
             \item Python 2.7.1
@@ -492,14 +316,14 @@
     \end{itemize}
     \end{frame}
      
-    % This provides the Javadoc, which is normally in a zip file under the docs directory of the Ghidra install
-    \imgframeheight{Help Documentation}{Screenshots/GhidraHelp.png}{.5}
-    \imgframewidth{Help Documentation}{Screenshots/GhidraAPIJavadoc.png}{1}
-     
     \begin{frame}
     \frametitle{Minimal Python Script Example}
         \insertpythonfile{minimal_example/minimal_example.py}
     \end{frame}
+     
+    % This provides the Javadoc, which is normally in a zip file under the docs directory of the Ghidra install
+    \imgframeheight{Help Documentation}{Screenshots/GhidraHelp.png}{.5}
+    \imgframewidth{Help Documentation}{Screenshots/GhidraAPIJavadoc.png}{1}
      
     \begin{frame}
     \frametitle{Useful API}
@@ -508,24 +332,23 @@
         \begin{itemize}
             \item Normal data types
             \begin{itemize}
-                % TODO: annotate as functions
-                \item askBytes
-                \item askInt
-                \item askString
+                \item askBytes(...) -> bytes
+                \item askInt(...) -> int
+                \item askString(...) -> string
             \end{itemize}
             \item Ghidra-specific types
             \begin{itemize}
-                \item askAddress -> ghidra.program.model.address.GenericAddress
-                \item askLanguage -> ghidra.program.model.lang.LanguageCompilerSpecPair
-                \item askProgram -> ghidra.program.database.ProgramDB
+                \item askAddress(...) -> GenericAddress
+                \item askLanguage(...) -> LanguageCompilerSpecPair
+                \item askProgram(...) -> ProgramDB
             \end{itemize}
         \end{itemize}
         \item Build Ghidra-specific types
         \begin{itemize}
-            \item parseAddress
-            \item parseLanguageCompileSpecPair
-            \item parseProjectFolder
-            \item toAddr(int) -> Address - convert an integer to a Ghidra address
+            \item toAddr(int) -> GenericAddress
+            \item parseAddress(...) -> GenericAddress
+            \item parseLanguageCompileSpecPair(...) -> ...
+            \item parseProjectFolder(...) -> ...
         \end{itemize}
     \end{itemize}
     \end{frame}
@@ -539,11 +362,11 @@
             \item currentAddress -> GenericAddress
             \item currentProgram.getLanguage() -> SleighLanguage
             \item getFirstFunction() \& getLastFunction() -> FunctionDB
-            \item getFunctionAt(Address) - Also After/Before/Containing
-            \item getDataAt(Address) - Also After/Before/Containing
-            \item getInstructionAt(Address) - Also After/Before/Containing
-            \item getPreComment(Address) - Also PlateComment/PostComment, also set!
-            \item setCurentLocation - move the Ghidra cursor
+            \item getFunctionContaining(Address) -> FunctionDB
+            \item getDataContaining(Address) -> ...
+            \item getInstructionContaining(Address) -> ...
+            \item getPreComment(Address) -> string
+            \item setCurentLocation(...)
         \end{itemize}
     \end{itemize}
     \end{frame}
@@ -553,14 +376,14 @@
     \begin{itemize}
         \item currentProgram.getLanguage()
         \begin{itemize}
-            \item .getLanguageDescription()
-            \item .getProgramCounter() - Register object, with offset, size, subregisters
-            \item .isBigEndian() - True if it's a big endian processor
+            \item .getLanguageDescription() -> LanguageDescription
+            \item .getProgramCounter() -> Register (includes name like `RIP')
+            \item .isBigEndian() -> bool
         \end{itemize}
         \item currentProgram.getLanguage().getLanguageDescription()
         \begin{itemize}
-            \item .getProcessor() - Processor object including name, like `x86'
-            \item .getSize() - Architecture bit count, like `64'
+            \item .getProcessor() -> Processor (includes name like `x86')
+            \item .getSize() -> int
         \end{itemize}
     \end{itemize}
     \end{frame}
@@ -570,33 +393,19 @@
     \begin{itemize}
         \item currentProgram.getCompilerSpec()
         \begin{itemize}
-            \item .getStackPointer() - Register object
-            \item .stackGrowsNegative() - True if the stack grows towards lower addresses
+            \item .getStackPointer() -> Register
+            \item .stackGrowsNegative() -> bool
         \end{itemize}
         \item currentProgram.getLanguage().getProgramCounter()
         \begin{itemize}
-            \item .getOffset()
-            \item .getMinimumByteSize()
-            \item .getBitLength()
+            \item .getOffset() -> int
+            \item .getMinimumByteSize() -> int
+            \item .getBitLength() -> int
         \end{itemize}
     \end{itemize}
     \end{frame}
 
 \section*{Resources}
-    \begin{frame}
-    \frametitle{Usage Recommendation}
-    \begin{itemize}
-        \item When reversing, build the following to simplify your reversing:
-        \begin{itemize}
-            \item Structures
-            \item Data types
-            \item Classes
-            \item Function signatures
-            \item Links to other binaries
-        \end{itemize}
-    \end{itemize}
-    \end{frame}
-
     \begin{frame}
     \frametitle{Ghidra Resources}
     \begin{itemize}
@@ -614,5 +423,9 @@
         \end{itemize}
     \end{itemize}
     \end{frame}
-    % TODO Thank you slide
+
+    \begin{frame}[plain,c]
+        \centering
+        \Huge Questions?
+    \end{frame}
 \end{document}
