@@ -62,17 +62,27 @@
 \tableofcontents
 \end{frame}
 
-\section*{Who Am I?}
+% Sorry about this ugly section header.
+\section*{Who Am I? \\
+    ~\\
+    \includegraphics[height=.6\textheight]{images/thewho.jpg}
+    }
     \begin{frame}
     \frametitle{Who Am I?}
-        \begin{itemize}
-            \item Karl `Rosie' Sickendick
-            \item Active duty Major in the Air Force
-            \item Stationed at Idaho National Labs as part of an Air Force fellowship program
-            \item BS in EE, MS in CS
-            \item Experience with: cyber capability and tactics development
-            \item Very happy to be here!
-        \end{itemize}
+        \begin{columns}
+            \column{.5\textwidth}
+            \begin{itemize}
+                \item Karl `Rosie' Sickendick
+                \item Active duty Major in the Air Force
+                \item Stationed at Idaho National Labs as part of an Air Force fellowship program
+                \item BS in EE, MS in CS
+                \item Experience with: cyber capability and tactics development
+                \item Very happy to be here!
+            \end{itemize}
+            \column{.5\textwidth}
+            \centering
+            \includegraphics{images/AFlogo.png}
+        \end{columns}
     \end{frame}
 
 \section{Introduction to Ghidra}
@@ -81,23 +91,25 @@
         \begin{itemize}
             \item Comrehensive software reverse engineering tool
             \begin{itemize}
-                \item NSA-produced open source 
+                \item NSA-produced, open source 
                 \item Your tax dollars at work!
             \end{itemize}
             \item Features a decompiler that supports many architectures
             \begin{itemize}
-                \item Sleigh modules translate from bytes to PCode
-                \item Sleigh understands architectures
-                \item PCode - architecture-agnostic intermediate language
-                \item Decompiler does data-flow analysis on the PCode
+                \item Sleigh: understands the architecture, bytes -> PCode
+                \item PCode: architecture-agnostic intermediate language
+                \item Decompiler: does data-flow analysis on the PCode
             \end{itemize}
             \item "Easily" extensible to new architectures
             \begin{itemize}
-                \item Build a Sleigh module for the architecture
-                \item Map bytes to instructions to PCode
+                \item Build a Sleigh module, map bytes -> instructions -> PCode
                 \item Get the decompiler for free
             \end{itemize}
         \end{itemize}
+        \begin{figure}
+            \centering
+            \includegraphics[scale=.5]{images/sleigh.png}
+        \end{figure}
     \end{frame}
 
     \begin{frame}
@@ -113,6 +125,10 @@
                 \item \texttt{GHIDRA\_INSTALL/ghidra\_version/ghidraRun}
             \end{itemize}
         \end{itemize}
+        \begin{figure}
+            \centering
+            \includegraphics[scale=.5]{images/GhidraPic.png}
+        \end{figure}
     \end{frame}
 
     \begin{frame}
@@ -205,6 +221,8 @@
         \end{itemize}
     \end{frame}
 
+    \imgframeheight{UNDO!}{images/IDAWoman.png}{.8}
+
     \imgframeheight{Scripts}{Screenshots/ScriptManagerBtn.png}{.8}
     \imgframewidth{Scripts}{Screenshots/ScriptManager.png}{1}
     \imgframewidth{Scripts}{Screenshots/ScriptManagerPCode.png}{1}
@@ -228,11 +246,9 @@
     \end{itemize}
     \end{frame}
 
-    % TODO - add a slide with an enigma machine
     \imgframeheight{An Enigma}{images/enigma.jpg}{.8}
     \begin{frame}
     \frametitle{PCode Emulation - Initial RAM Environment Setup}
-        % TODO - add the initial decompilation so I can explain the ram setup
         \begin{itemize}
             \item Output @ 0x0: "\textbackslash x00\textbackslash x00\textbackslash x00\textbackslash x00\textbackslash x00\textbackslash x00\textbackslash x00\textbackslash x00"
             \item Key / initial rotor states @ 0x8: "AAA"
@@ -258,9 +274,8 @@
     \imgframewidth{PCode Emulation - Running...}{Screenshots/Running2.png}{1}
     \begin{frame}
     \frametitle{PCode Emulation - Running...}
-        \begin{itemize}
-            \item About 2.25 minutes later...
-        \end{itemize}
+        \centering
+        \Huge About 2.25 minutes later...
     \end{frame}
     \imgframewidth{PCode Emulation - Complete!}{Screenshots/ExecutionComplete.png}{1}
     \imgframewidth{PCode Emulation - Complete!}{Screenshots/OutputSelected.png}{1}
