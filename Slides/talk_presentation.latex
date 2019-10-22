@@ -25,7 +25,7 @@
  
 %Information to be included in the title page:
 \title{Reverse Engineering and Code Emulation with Ghidra}
-\author{Karl `Rosie' Sickendick}
+\author{Karl `Rosie' Sickendick - @kc0bfv}
 %\institute{}
 \date{October 2019}
  
@@ -72,7 +72,7 @@
         \begin{columns}
             \column{.5\textwidth}
             \begin{itemize}
-                \item Karl `Rosie' Sickendick
+                \item Karl `Rosie' Sickendick - @kc0bfv
                 \item Active duty Major in the Air Force
                 \item Stationed at Idaho National Labs as part of an Air Force fellowship program
                 \item BS in EE, MS in CS
