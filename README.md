@@ -1,6 +1,8 @@
 # Description
 Source code for my talk at Saintcon 2019.
 
+Video posted at https://www.youtube.com/watch?v=NHbmBeXXi5I
+
 Compiled PDF is in https://github.com/kc0bfv/Saintcon2019GhidraTalk/blob/master/Slides/talk_presentation.pdf
 
 Source code for my PCode emulator is: https://github.com/kc0bfv/pcode-emulator
